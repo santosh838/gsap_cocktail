@@ -47,7 +47,7 @@ const Hero = () => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "video",
+        trigger: videoRef.current,
         start: startValue,
         end: endValue,
         scrub: true,
@@ -60,7 +60,7 @@ const Hero = () => {
         currentTime: videoRef.current.duration,
       });
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <>
